@@ -1,0 +1,31 @@
+<!-- <svg
+  {...Astro.props}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  preserveAspectRatio="xMidYMid"
+>
+  <circle cx="128" cy="128" r="120" fill="#2E86DE" />
+  <circle cx="128" cy="128" r="42" fill="#ffffff" />
+  <circle cx="58" cy="128" r="22" fill="#ffffff" />
+  <circle cx="198" cy="128" r="22" fill="#ffffff" />
+  <circle cx="128" cy="58" r="22" fill="#ffffff" />
+  <circle cx="128" cy="198" r="22" fill="#ffffff" />
+</svg> -->
+
+<svg
+  {...Astro.props}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  preserveAspectRatio="xMidYMid"
+>
+  <!-- Líneas -->
+  <line x1="128" y1="128" x2="64" y2="160" stroke="#3CB6D9" stroke-width="12" />
+  <line x1="128" y1="128" x2="160" y2="64" stroke="#3CB6D9" stroke-width="12" />
+  <line x1="128" y1="128" x2="192" y2="176" stroke="#3CB6D9" stroke-width="12" />
+
+  <!-- Nodos -->
+  <circle cx="128" cy="128" r="32" fill="#3CB6D9" />
+  <circle cx="64" cy="160" r="22" fill="#3CB6D9" />
+  <circle cx="160" cy="64" r="18" fill="#3CB6D9" />
+  <circle cx="192" cy="176" r="26" fill="#3CB6D9" />
+</svg>

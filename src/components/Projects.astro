@@ -1,40 +1,69 @@
 ---
-import LaravelIcon  from "../components/icons/Laravel.astro";
+import LaravelIcon from "../components/icons/Laravel.astro";
 import AstroIcon from "../components/icons/AstroIcon.astro";
+import NodeIcon from "../components/icons/NodeJS.astro";
+import MoleculerIcon from "../components/icons/Moleculer.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Link from "../components/icons/Link.astro";
 
 const TAGS = {
-    LARAVEL : {
+    LARAVEL: {
         name: "Laravel",
         class: "bg-white/5 text-white",
         icon: LaravelIcon,
     },
-    ASTRO : {
+    ASTRO: {
         name: "Astro",
         class: "bg-white/5 text-white",
         icon: AstroIcon,
     },
-}
+    NODE: {
+        name: "Node.js",
+        class: "bg-white/5 text-white",
+        icon: NodeIcon,
+    },
+    MOLECULER: {
+        name: "Moleculer",
+        class: "bg-white/5 text-white",
+        icon: MoleculerIcon,
+    },
+};
 
 
 const PROJECTS = [
     {
-        title: "AquaControl",
-        description: "Creado con Laravel, AquaControl es un sistema integral para el monitoreo y control de los pagos y deudas de los derechohabientes del servicio de agua en diversas localidades del Estado de México.",
-        link: "https://aquacontrol.rootheim.com/",
-        github: "https://github.com/temolzin/AquaGeneric",
-        image: "/projects/aquaControl.webp",
-        tags: [TAGS.LARAVEL],
+        title: "Municipio 360",
+        description: `Plataforma para la digitalización y gestión de procesos municipales.
+
+        Desarrollo de servicios backend para la administración de usuarios, catálogos y procesos administrativos, utilizando una arquitectura basada en microservicios.
+
+        Implementación de APIs REST para la integración entre los distintos módulos del sistema y la aplicación móvil.
+
+        Validación y carga masiva de información mediante procesos automatizados, así como apoyo en la optimización de consultas y procedimientos almacenados para mejorar el rendimiento del sistema.`,
+        link: "https://www.municipio-360.com/login/", // ajusta si aplica
+        image: "/projects/infoMunicipio360.png",
+        tags: [TAGS.NODE, TAGS.MOLECULER],
     },
     {
-        title: "Flowers",
-        description: "Creado con Astro, Flowers es el diseño de descripción de un producto ficticio, una floristería que ofrece una amplia variedad de flores y arreglos florales. Fue parte de un proyecto escolar.",
-        link: "https://flower-shop-kappa-blush.vercel.app/",
-        github: "https://github.com/josejulianmtnez/flower-shop",
-        image: "/projects/flowers.webp",
-        tags: [TAGS.ASTRO],
+        title: "Trackit-HPL",
+        description: `Sistema para la gestión logística, flotas de transporte y transportistas externos.
+        Desarrollo y mantenimiento de microservicios en Node.js con Moleculer.
+        Implementación de flujos de asignación, reasignación y monitoreo de traslados.
+        Integración de autenticación y control de acceso mediante JWT y Bcrypt.
+        Consumo de APIs externas (Google Maps) para geolocalización y seguimiento.
+        Optimización de procesos enfocados en escalabilidad y estabilidad del sistema.`,
+        link: "https://www.trackitapp.com.mx/login", // ajusta si aplica
+        image: "/projects/infoTrackit.png",
+        tags: [TAGS.NODE, TAGS.MOLECULER],
+    },
+    {
+        title: "Plataforma Victoria 147",
+        description: `Sistema para la gestión de una red de empresarias y organizaciones.
+        Desarrollo y mantenimiento de funcionalidades backend para la publicación y administración de productos, servicios, beneficios y actividades dentro de la plataforma. Implementación de servicios REST para el manejo de usuarios, contenidos y flujos internos de la red. Integración de lógica de negocio para la gestión de registros, validaciones y control de información. Optimización y ajustes funcionales basados en requerimientos del usuario final, priorizando estabilidad, escalabilidad y mantenibilidad del sistema.`,
+        link: "https://victoria147.plataforma-empresarial.com/", // ajusta si aplica
+        image: "/projects/infoVictoria.png",
+        tags: [TAGS.NODE, TAGS.MOLECULER],
     },
 ]
 ---
@@ -50,7 +79,7 @@ const PROJECTS = [
                 </div>
 
                 <div class="w-full md:w-1/2 md:max-w-lg">
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                    <h3 class="text-2xl font-bold text-white dark:text-gray-100">
                         {title}
                     </h3>
                     <div class="flex flex-wrap mt-2">
@@ -65,7 +94,7 @@ const PROJECTS = [
                         ))}
                         </ul>
 
-                        <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+                        <div class="mt-2 text-white dark:text-gray-400">{description}</div>
                             <footer class="flex items-end justify-start mt-4 gap-x-4">
                                 {github && (
                                     <LinkButton href={github}>
